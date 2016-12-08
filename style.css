@@ -1,0 +1,167 @@
+@keyframes flash {
+    0%   { background-color: red; }
+    49% { background-color: red; }
+    50% { background-color: green; }
+    99% { background-color: green; }
+    100% { background-color: green; }
+}
+
+@keyframes flash-text {
+    0%   { color: white; }
+    49% { color: white; }
+    50% { color: yellow; }
+    99% { color: yellow; }
+    100% { color: yellow; }
+}
+
+html, body {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	animation: flash 0.2s infinite;
+}
+
+.message {
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	animation: flash-text 0.2s infinite
+}
+
+/**
+*	SNOWFLAKE
+**/
+
+.st0 {
+  fill: #08D0E9;
+}
+
+.st1 {
+  fill: #08579A;
+}
+
+.st2 {
+  fill: #088AE8;
+}
+
+.st3 {
+  fill: #157CB3;
+}
+
+.st4 {
+  fill: #0ED1EA;
+}
+
+.st5 {
+  fill: #0C8CE8;
+}
+
+.st6 {
+  fill: #0085E7;
+}
+
+.st7 {
+  fill: #58A6EA;
+}
+
+section {
+  height: 250px;
+  width: 100px;
+  position: absolute;
+}
+
+#section1 {
+	top: 0%;
+	left: 10%;
+}
+#section2 {
+	top: 0%;
+	right: 10%;
+}
+#section3 {
+	bottom: 0%;
+	left: 10%;
+}
+#section4 {
+	bottom: 0;
+	right: 10%;
+}
+#section5 {
+    width: 100%;
+    text-align: center;
+    transform: translate(-3%,100%);
+}
+
+svg {
+  height: 100px;
+  padding-bottom: 25px;
+  position: absolute;
+  transform-origin: 50% 100%;
+  animation: magic 0.5s linear infinite alternate;
+  mix-blend-mode: color;
+  will-change: filter;
+}
+
+path {
+  transform-origin: 50% 130%;
+  animation: power 1s infinite cubic-bezier(0.77, 0, 0.175, 1);
+  will-change: transform;
+}
+
+svg:nth-child(1) {
+  transform: rotate(45deg);
+  animation-delay: 0.1s;
+}
+
+svg:nth-child(2) {
+  transform: rotate(90deg);
+  animation-delay: 0.2s;
+}
+
+svg:nth-child(3) {
+  transform: rotate(135deg);
+  animation-delay: 0.3s;
+}
+
+svg:nth-child(4) {
+  transform: rotate(180deg);
+  animation-delay: 0.4s;
+}
+
+svg:nth-child(5) {
+  transform: rotate(225deg);
+  animation-delay: 0.5s;
+}
+
+svg:nth-child(6) {
+  transform: rotate(270deg);
+  animation-delay: 0.6s;
+}
+
+svg:nth-child(7) {
+  transform: rotate(315deg);
+  animation-delay: 0.7s;
+}
+
+svg:nth-child(8) {
+  transform: rotate(360deg);
+  animation-delay: 0.8s;
+}
+
+@keyframes magic {
+  50% {
+    filter: hue-rotate(0deg) invert(100%);
+  }
+
+  100% {
+    filter: hue-rotate(90deg) invert(0%);
+  }
+}
+
+@keyframes power {
+  100% {
+    transform: rotate(360deg);
+  }
+}
